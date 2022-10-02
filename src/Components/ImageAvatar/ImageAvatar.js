@@ -10,14 +10,13 @@ import {useState} from "react"
 
 function ImageAvatar() {
 
-  const [profile, setProfile] = useState(
-    1
-);
+  const [profile, setProfile] = useState(0);
 
-function handleChange(event) {
+function handleProfileChange(event) {
     setProfile(URL.createObjectURL(event.target.files[0]));
     console.log(event.target.files);
 }
+
 
 
     return (
@@ -29,7 +28,7 @@ function handleChange(event) {
         variant="dot">
         <Avatar 
         alt="Bhupinder Singh" 
-        src={{profile} ? String({profile}) : "static/images/avatar/2.jpg"}
+        src={{profile} ? "static/images/avatar/2.jpg": String({profile})}
         sx={{ 
             bgcolor: deepOrange[500],
             width: 56,
@@ -38,7 +37,7 @@ function handleChange(event) {
             left: 40,
             }}
             />   
-        <input hidden accept="image/*" type="file" onChange={handleChange}/>
+        <input hidden accept="image/*" type="file" onChange={handleProfileChange}/>
         <img alt= "" src={profile}/>
       </StyledBadge>
       </IconButton>
