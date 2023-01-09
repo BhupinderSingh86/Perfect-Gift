@@ -5,8 +5,8 @@ import ProfileBackground from "../ProfileBackground/ProfileBackground";
 function App() {
   return (
     <div>
-    <ImageAvatar/>
     <ProfileBackground/>
+    <ImageAvatar/>
 
     </div>
   );

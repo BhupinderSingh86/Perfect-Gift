@@ -10,37 +10,38 @@ import {useState} from "react"
 
 function ImageAvatar() {
 
-  const [profile, setProfile] = useState(0);
+  const [profile, setProfile] = useState(
+    1
+);
 
-function handleProfileChange(event) {
+function handleChange(event) {
     setProfile(URL.createObjectURL(event.target.files[0]));
     console.log(event.target.files);
 }
 
 
-
     return (
         <div>
-        <IconButton color="primary" aria-label="upload picture" component="label">
+        {/* <IconButton color="primary" aria-label="upload picture" component="label"> */}
         <StyledBadge
         overlap="circular"
         anchorOrigin={{ vertical: 'bottom', horizontal: 'right' }}
         variant="dot">
         <Avatar 
         alt="Bhupinder Singh" 
-        src={{profile} ? "static/images/avatar/2.jpg": String({profile})}
+        src="./Job photo1.jpg"
         sx={{ 
             bgcolor: deepOrange[500],
             width: 56,
             height: 56,
-            top: 200,
-            left: 40,
+            top: 0,
+            left: 0,
             }}
             />   
-        <input hidden accept="image/*" type="file" onChange={handleProfileChange}/>
-        <img alt= "" src={profile}/>
       </StyledBadge>
-      </IconButton>
+        {/* <input hidden accept="image/*" type="file" onChange={handleChange}/>
+        <img alt= "" src={profile}/> */}
+      {/* </IconButton> */}
         </div>
     )
 }
@@ -50,7 +51,7 @@ const StyledBadge = styled(Badge)(({ theme }) => ({
       backgroundColor: '#44b700',
       color: '#44b700',
       boxShadow: `0 0 0 2px ${theme.palette.background.paper}`,
-      top: 235,
+      top: 38,
       '&::after': {
         position: 'absolute',
         top: 0,
