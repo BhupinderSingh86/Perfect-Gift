@@ -9,7 +9,6 @@ function App() {
     <div>
     <ProfileBackground/>
     <ImageAvatar/>
-    <ProfileBackground/>
     <SignUpForm/>
     </div>
   );
