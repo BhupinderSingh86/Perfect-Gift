@@ -1,9 +1,11 @@
 import React from 'react'
+import { Link } from "react-router-dom";
 
 function SignUpForm () {
 
     return (
 <>
+<Link to="/">Click to go to home page</Link>
 <form method="Get">
 		First Name:<input type="text" name="firstname"/><br/>
 		Last Name:<input type="text" name="lastname"/><br/>
