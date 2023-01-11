@@ -4,6 +4,7 @@ import "./ProfileBackground.css"
 import Button from '@mui/material/Button'
 import IconButton from '@mui/material/IconButton';
 import { Container, Typography } from '@mui/material';
+import { Link } from "react-router-dom";
 
 // //when login is set up include a iternary if statement for the styled badge to show when logged on otherwise off
 
@@ -33,6 +34,7 @@ function handleChange(event) {
 
     return (
         <>
+        <Link to="Sign Up Form">Click to Sign Up</Link>
         <Container>
         <Typography variant="h4" component="h1" color="secondary" align="center">Click below to add your personalised background</Typography>
         </Container>
